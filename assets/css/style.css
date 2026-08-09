@@ -176,6 +176,7 @@ body.wf-cursor-hover .wf-cursor { width: 52px; height: 52px; margin: -26px 0 0 -
   transition: filter .08s linear, transform .08s linear;
 }
 @keyframes wf-namein { to { opacity: 1; filter: blur(0) drop-shadow(0 0 0 transparent); transform: translateY(0) scale(1); } }
+.wf-hero__aka { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.08em; color: var(--faint); margin-top: -8px; margin-bottom: 22px; }
 .wf-hero__bio { font-size: 17px; color: var(--muted); max-width: 600px; line-height: 1.75; margin-bottom: 34px; }
 .wf-hero__cta { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 60px; }
 .wf-scroll-cue { display: flex; flex-direction: column; align-items: center; gap: 8px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; color: var(--faint); text-transform: uppercase; }
@@ -285,6 +286,17 @@ body.wf-cursor-hover .wf-cursor { width: 52px; height: 52px; margin: -26px 0 0 -
 .wf-social__handle { font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--bone); margin-bottom: 6px; }
 .wf-social__desc { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
 
+/* ---------------- Persistent radio bar ---------------- */
+body.has-radiobar { padding-bottom: 64px; }
+.wf-radiobar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 500; display: flex; align-items: center; gap: 16px; padding: 12px 20px; background: rgba(7,4,16,0.88); backdrop-filter: blur(16px); border-top: 1px solid var(--edge-2); }
+.wf-radiobar__title { flex: 1; min-width: 0; font-family: var(--display); font-weight: 700; font-size: 13px; color: var(--bone); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.wf-radiobar__skip { flex: none; background: none; border: none; font-family: var(--mono); font-size: 11.5px; color: var(--muted); cursor: pointer; transition: color .2s; padding: 0; }
+.wf-radiobar__skip:hover { color: var(--gold); }
+.wf-radiobar__link { flex: none; font-family: var(--mono); font-size: 10.5px; color: var(--faint); text-decoration: none; transition: color .2s; }
+.wf-radiobar__link:hover { color: var(--gold); }
+.wf-radiobar__unmute { flex: none; padding: 7px 14px; font-size: 12px; }
+@media (max-width: 640px) { .wf-radiobar { padding: 10px 14px; gap: 10px; } .wf-radiobar__link { display: none; } }
+
 /* ---------------- Radio ---------------- */
 .wf-radio { display: grid; grid-template-columns: 1.3fr 1fr; gap: 20px; align-items: start; }
 .wf-radio__queue { display: flex; flex-direction: column; gap: 10px; }
@@ -296,6 +308,10 @@ body.wf-cursor-hover .wf-cursor { width: 52px; height: 52px; margin: -26px 0 0 -
 .wf-radio__track-body { display: flex; flex-direction: column; gap: 3px; }
 .wf-radio__track-body strong { font-family: var(--display); font-weight: 700; font-size: 14px; color: var(--bone); }
 .wf-radio__track-body small { font-size: 11.5px; color: var(--muted); line-height: 1.4; }
+.wf-radio__track--bonus { border-style: dashed; margin-top: 4px; }
+.wf-radio__track--bonus .wf-radio__track-num { color: var(--cyan); font-size: 14px; }
+.wf-radio__track--bonus.is-active { border-color: var(--cyan); background: rgba(77,238,255,0.07); border-style: solid; }
+.wf-radio__track--bonus.is-active .wf-radio__track-num { color: var(--cyan); }
 @media (max-width: 860px) { .wf-radio { grid-template-columns: 1fr; } }
 
 /* ---------------- About ---------------- */

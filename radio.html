@@ -41,7 +41,7 @@
       <div class="container">
         <p class="wf-pagehero__eyebrow">On Rotation</p>
         <h1 class="wf-pagehero__title">WealthDJ Radio</h1>
-        <p class="wf-pagehero__sub">No live tower — just the real catalog on continuous rotation. One tape ends, the next one loads and plays itself. Skip ahead any time.</p>
+        <p class="wf-pagehero__sub">No live tower — just the real catalog on continuous rotation, starting the moment this page loads (muted, per your browser's rules — one tap unmutes it, and it stays audible as you move around the site). One tape ends, the next one loads and plays itself.</p>
       </div>
     </header>
 
@@ -57,12 +57,18 @@
               src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/wealthdj/afro-jubilee-mixtape-dj-wealth&color=%23FFCA3A&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"
               title="WealthDJ Radio player">
             </iframe>
+            <iframe id="mcPlayer" allow="autoplay" height="140" style="display:none;border:none;border-radius:10px"
+              src="about:blank" title="WealthDJ Radio player (Mixcloud)">
+            </iframe>
             <div class="wf-player__foot">
               <div>
                 <div id="radioNowTitle" style="font-family:var(--display);font-weight:700;color:var(--bone);font-size:15px;margin-bottom:4px">Afro-Jubilee Mixtape</div>
                 <p id="radioNowDesc" class="wf-player__desc" style="margin:0">Jubilee rhythm meets Afrobeats, slow-jam cuts, and gospel anthems, feat. Frank Edwards, Lc Beatz, Shola Shittu &amp; Rymsta Ray.</p>
               </div>
-              <button class="wf-btn wf-btn--sm" id="radioNext" type="button">Skip Track &rarr;</button>
+              <div style="display:flex;gap:8px;flex:none">
+                <button class="wf-btn wf-btn--sm" id="radioUnmute" type="button">Unmute</button>
+                <button class="wf-btn wf-btn--sm" id="radioNext" type="button">Skip Track &rarr;</button>
+              </div>
             </div>
           </div>
 
@@ -80,11 +86,15 @@
               <span class="wf-radio__track-num">03</span>
               <span class="wf-radio__track-body"><strong>Unchained Mixtape</strong><small>Feat. Dj Berry, Dj D-David, Dj X-One, Dj Josh, Limoblaze</small></span>
             </button>
+            <button class="wf-radio__track wf-radio__track--bonus" id="radioBonusTrack" type="button" role="listitem">
+              <span class="wf-radio__track-num">+</span>
+              <span class="wf-radio__track-body"><strong>Church Street</strong><small>Feat. Gaise, Snatcha, Testimony Jaga, Tim Godfrey, Ada, Mike Abdul, Joe Praize &middot; bonus track, via Mixcloud &mdash; tap to play</small></span>
+            </button>
           </div>
         </div>
 
         <p style="text-align:center;color:var(--faint);font-family:var(--mono);font-size:11.5px;margin-top:24px">
-          Rotation pulled straight from the SoundCloud catalog. Want the full 25-tape crate instead? <a href="sound.html" style="color:var(--gold)">Browse The Sound &rarr;</a>
+          The 3-track rotation loops automatically. The Mixcloud bonus track plays on request and won't auto-advance. Want the full 25-tape crate instead? <a href="sound.html" style="color:var(--gold)">Browse The Sound &rarr;</a>
         </p>
       </div>
     </section>
@@ -98,7 +108,7 @@
   </footer>
 
   <script src="assets/js/waveform.js"></script>
-  <script src="assets/js/radio.js"></script>
+  <script src="assets/js/radio-core.js"></script>
   <script src="assets/js/site.js"></script>
 </body>
 </html>
