@@ -267,6 +267,8 @@ body.wf-cursor-hover .wf-cursor { width: 52px; height: 52px; margin: -26px 0 0 -
 .wf-booking { display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px; }
 @media (max-width: 860px) { .wf-booking { grid-template-columns: 1fr; } }
 .wf-panel { background: var(--panel); border: 1px solid var(--edge); border-radius: var(--radius); backdrop-filter: blur(16px); padding: 28px; }
+.wf-panel--portrait { background-image: linear-gradient(90deg, var(--solid) 0%, var(--solid) 42%, rgba(17,10,31,0.55) 68%, transparent 100%), var(--portrait-img); background-size: cover; background-position: right top; }
+@media (max-width: 640px) { .wf-panel--portrait { background-image: linear-gradient(180deg, rgba(17,10,31,0.4) 0%, var(--solid) 78%), var(--portrait-img); background-position: center top; } }
 .wf-avail { list-style: none; display: flex; flex-direction: column; }
 .wf-avail li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--edge); font-size: 14px; }
 .wf-avail li:last-child { border-bottom: none; padding-bottom: 0; }
@@ -282,6 +284,16 @@ body.wf-cursor-hover .wf-cursor { width: 52px; height: 52px; margin: -26px 0 0 -
 .wf-social__platform { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
 .wf-social__handle { font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--bone); margin-bottom: 6px; }
 .wf-social__desc { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+
+/* ---------------- About ---------------- */
+.wf-about { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 44px; align-items: center; }
+.wf-about__media { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--edge-2); aspect-ratio: 4/5; position: relative; }
+.wf-about__media img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+.wf-about__body p { color: var(--muted); font-size: 15px; line-height: 1.75; margin-bottom: 16px; }
+@media (max-width: 780px) {
+  .wf-about { grid-template-columns: 1fr; gap: 24px; }
+  .wf-about__media { max-width: 320px; margin: 0 auto; }
+}
 
 /* ---------------- Cover-art marquee ---------------- */
 .wf-marquee { display: block; width: 100%; overflow: hidden; position: relative; -webkit-mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent); mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent); }
