@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radio — WealthDJ</title>
+  <meta name="description" content="WealthDJ Radio — the real SoundCloud catalog on continuous rotation. One tape ends, the next one starts, no live tower required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://w.soundcloud.com/player/api.js"></script>
+</head>
+<body data-page-label="Radio">
+
+  <canvas id="wf-canvas" aria-hidden="true"></canvas>
+  <div class="wf-veil" aria-hidden="true"></div>
+  <div class="wf-cursor" aria-hidden="true"></div>
+  <div class="wf-cursor-dot" aria-hidden="true"></div>
+  <div class="wf-chapter" aria-hidden="true">Now Reading &middot; <strong>Radio</strong></div>
+  <div class="wf-scrubber" aria-hidden="true"><div class="wf-scrubber__fill"><span class="wf-scrubber__head"></span></div></div>
+
+  <nav class="wf-nav" aria-label="Main navigation">
+    <div class="container wf-nav__inner">
+      <a class="wf-brand" href="index.html"><img src="assets/img/djwealth-logo.png" alt="" aria-hidden="true">WealthDJ</a>
+      <button class="wf-nav__toggle" aria-expanded="false" aria-controls="wf-nav-links">Menu ▾</button>
+      <div class="wf-nav__links" id="wf-nav-links">
+        <a href="index.html">Home</a>
+        <a href="sound.html">Sound</a>
+        <a href="ensemble.html">Ensemble</a>
+        <a href="booking.html">Booking</a>
+        <a href="channels.html">Channels</a>
+        <a href="radio.html">Radio</a>
+        <a href="booking.html" class="wf-nav__cta">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="wf-pagehero">
+      <div class="container">
+        <p class="wf-pagehero__eyebrow">On Rotation</p>
+        <h1 class="wf-pagehero__title">WealthDJ Radio</h1>
+        <p class="wf-pagehero__sub">No live tower — just the real catalog on continuous rotation. One tape ends, the next one loads and plays itself. Skip ahead any time.</p>
+      </div>
+    </header>
+
+    <section class="wf-section">
+      <div class="container">
+        <div class="wf-radio rv">
+          <div class="wf-player wf-radio__player">
+            <div class="wf-player__tag">
+              <span class="wf-live"><span class="wf-live__dot" aria-hidden="true"></span>On Air &middot; Auto-Advancing</span>
+              <span id="radioCount">Track 1 of 3</span>
+            </div>
+            <iframe id="scPlayer" allow="autoplay" height="140"
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/wealthdj/afro-jubilee-mixtape-dj-wealth&color=%23FFCA3A&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"
+              title="WealthDJ Radio player">
+            </iframe>
+            <div class="wf-player__foot">
+              <div>
+                <div id="radioNowTitle" style="font-family:var(--display);font-weight:700;color:var(--bone);font-size:15px;margin-bottom:4px">Afro-Jubilee Mixtape</div>
+                <p id="radioNowDesc" class="wf-player__desc" style="margin:0">Jubilee rhythm meets Afrobeats, slow-jam cuts, and gospel anthems, feat. Frank Edwards, Lc Beatz, Shola Shittu &amp; Rymsta Ray.</p>
+              </div>
+              <button class="wf-btn wf-btn--sm" id="radioNext" type="button">Skip Track &rarr;</button>
+            </div>
+          </div>
+
+          <div class="wf-radio__queue" role="list" aria-label="Rotation queue">
+            <div class="wf-section__label" style="margin-bottom:4px">In Rotation</div>
+            <button class="wf-radio__track is-active" data-track-idx="0" type="button" role="listitem">
+              <span class="wf-radio__track-num">01</span>
+              <span class="wf-radio__track-body"><strong>Afro-Jubilee Mixtape</strong><small>Feat. Frank Edwards, Lc Beatz, Shola Shittu, Rymsta Ray</small></span>
+            </button>
+            <button class="wf-radio__track" data-track-idx="1" type="button" role="listitem">
+              <span class="wf-radio__track-num">02</span>
+              <span class="wf-radio__track-body"><strong>XtremGospel Mixtape</strong><small>Feat. Dj X-One, Jahdiel, Frank Edwards, Freke Umoh, Mike Abdul</small></span>
+            </button>
+            <button class="wf-radio__track" data-track-idx="2" type="button" role="listitem">
+              <span class="wf-radio__track-num">03</span>
+              <span class="wf-radio__track-body"><strong>Unchained Mixtape</strong><small>Feat. Dj Berry, Dj D-David, Dj X-One, Dj Josh, Limoblaze</small></span>
+            </button>
+          </div>
+        </div>
+
+        <p style="text-align:center;color:var(--faint);font-family:var(--mono);font-size:11.5px;margin-top:24px">
+          Rotation pulled straight from the SoundCloud catalog. Want the full 25-tape crate instead? <a href="sound.html" style="color:var(--gold)">Browse The Sound &rarr;</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wf-footer">
+    <div class="container">
+      <span>© <span id="year"></span> DJ Wealth · Part of HoWz Studios</span>
+      <span>Bookings &nbsp;·&nbsp; <a href="mailto:howzstd@gmail.com">howzstd@gmail.com</a></span>
+    </div>
+  </footer>
+
+  <script src="assets/js/waveform.js"></script>
+  <script src="assets/js/radio.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
