@@ -11,27 +11,26 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://w.soundcloud.com/player/api.js"></script>
 </head>
-<body>
+<body data-page-label="Home">
 
   <canvas id="wf-canvas" aria-hidden="true"></canvas>
   <div class="wf-veil" aria-hidden="true"></div>
   <div class="wf-cursor" aria-hidden="true"></div>
   <div class="wf-cursor-dot" aria-hidden="true"></div>
-  <div class="wf-chapter" aria-hidden="true">Now Reading &middot; <strong>Intro</strong></div>
-
+  <div class="wf-chapter" aria-hidden="true">Now Reading &middot; <strong>Home</strong></div>
   <div class="wf-scrubber" aria-hidden="true"><div class="wf-scrubber__fill"><span class="wf-scrubber__head"></span></div></div>
 
   <nav class="wf-nav" aria-label="Main navigation">
     <div class="container wf-nav__inner">
-      <a class="wf-brand" href="#top"><img src="assets/img/djwealth-logo.png" alt="" aria-hidden="true">WealthDJ</a>
+      <a class="wf-brand" href="index.html"><img src="assets/img/djwealth-logo.png" alt="" aria-hidden="true">WealthDJ</a>
       <button class="wf-nav__toggle" aria-expanded="false" aria-controls="wf-nav-links">Menu ▾</button>
       <div class="wf-nav__links" id="wf-nav-links">
-        <a href="#spinning">Listen</a>
-        <a href="#sound">Sound</a>
-        <a href="#ensemble">Ensemble</a>
-        <a href="#booking">Booking</a>
-        <a href="#channels">Channels</a>
-        <a href="mailto:howzstd@gmail.com?subject=WealthDJ%20Booking" class="wf-nav__cta">Book Now</a>
+        <a href="index.html">Home</a>
+        <a href="sound.html">Sound</a>
+        <a href="ensemble.html">Ensemble</a>
+        <a href="booking.html">Booking</a>
+        <a href="channels.html">Channels</a>
+        <a href="booking.html" class="wf-nav__cta">Book Now</a>
       </div>
     </div>
   </nav>
@@ -47,8 +46,8 @@
         Worship on the bedrock, African rhythm on top. DJ Wealth has spent over a decade turning gospel vocals and Afrobeat energy into one continuous set — mixtapes built for sanctuaries, weddings, festivals, and everything between.
       </p>
       <div class="wf-hero__cta">
-        <a class="wf-btn wf-btn--primary" href="#spinning">Press Play</a>
-        <a class="wf-btn" href="mailto:howzstd@gmail.com?subject=WealthDJ%20Booking&body=Event%20type%3A%20%0ADate%3A%20%0AVenue%20%2F%20location%3A%20%0AAudience%20size%3A%20%0AVibe%20%2F%20energy%3A%20%0A%0ANotes%3A%20">Book the Set</a>
+        <a class="wf-btn wf-btn--primary" href="sound.html">Explore the Sound</a>
+        <a class="wf-btn" href="booking.html">Book the Set</a>
       </div>
       <div class="wf-scroll-cue"><span>Scroll</span><span class="wf-scroll-cue__line" aria-hidden="true"></span></div>
     </header>
@@ -58,15 +57,15 @@
       <div class="container">
         <div class="wf-stats rv">
           <div class="wf-stat"><div class="wf-stat__label">Total Plays</div><div class="wf-stat__num">435K+</div><div class="wf-stat__foot">Streams across the catalog on Audiomack</div></div>
-          <div class="wf-stat"><div class="wf-stat__label">Mixtapes</div><div class="wf-stat__num">25+</div><div class="wf-stat__foot">Full-length tapes and compilations since 2014</div></div>
+          <div class="wf-stat"><div class="wf-stat__label">Mixtapes</div><div class="wf-stat__num">25</div><div class="wf-stat__foot">Full-length tapes and compilations, 2014 &rarr; 2026</div></div>
           <div class="wf-stat"><div class="wf-stat__label">Artists</div><div class="wf-stat__num">100+</div><div class="wf-stat__foot">Names stitched across the ensemble</div></div>
           <div class="wf-stat"><div class="wf-stat__label">Reach</div><div class="wf-stat__num">US+</div><div class="wf-stat__foot">Based stateside, booking worldwide</div></div>
         </div>
       </div>
     </section>
 
-    <!-- NOW SPINNING -->
-    <section class="wf-section" id="spinning">
+    <!-- NOW SPINNING TEASER -->
+    <section class="wf-section" aria-label="Now spinning">
       <div class="container">
         <div class="wf-section__head rv"><span class="wf-section__label">Live</span><h2 class="wf-section__title">Now <em>Spinning</em></h2></div>
         <div class="wf-player rv">
@@ -80,214 +79,37 @@
           </iframe>
           <div class="wf-player__foot">
             <p class="wf-player__desc">Afro-Jubilee Mixtape — jubilee rhythm meets Afrobeats, slow-jam cuts, and gospel anthems, featuring Frank Edwards, Lc Beatz, Shola Shittu, and Rymsta Ray.</p>
-            <a class="wf-btn wf-btn--sm" href="https://audiomack.com/wealthdj" target="_blank" rel="noopener noreferrer">Full Catalog on Audiomack →</a>
+            <a class="wf-btn wf-btn--sm" href="sound.html">Browse Every Tape &rarr;</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SOUND -->
-    <section class="wf-section" id="sound">
+    <!-- EXPLORE PORTALS -->
+    <section class="wf-section" aria-label="Explore">
       <div class="container">
-        <div class="wf-section__head rv"><span class="wf-section__label">Genres</span><h2 class="wf-section__title">The <em>Sound</em></h2></div>
-        <p class="wf-section__lede rv" style="margin-bottom:8px">Worship is the foundation — everything else, from amapiano to hip-hop, gets mixed in around it. Laid out like a selector's wheel, not a menu.</p>
-
-        <div class="wf-wheel rv" aria-hidden="true">
-          <span class="wf-wheel__ring"></span>
-          <span class="wf-wheel__ring wf-wheel__ring--in"></span>
-          <span class="wf-wheel__spoke" style="--a:0deg"></span>
-          <span class="wf-wheel__spoke" style="--a:40deg"></span>
-          <span class="wf-wheel__spoke" style="--a:80deg"></span>
-          <span class="wf-wheel__spoke" style="--a:120deg"></span>
-          <span class="wf-wheel__spoke" style="--a:160deg"></span>
-          <span class="wf-wheel__spoke" style="--a:200deg"></span>
-          <span class="wf-wheel__spoke" style="--a:240deg"></span>
-          <span class="wf-wheel__spoke" style="--a:280deg"></span>
-          <span class="wf-wheel__spoke" style="--a:320deg"></span>
-          <div class="wf-wheel__center"><img src="assets/img/djwealth-logo.png" alt="" /><span>The Wheel</span></div>
-          <div class="wf-wheel__item" style="--a:0deg"><div class="wf-genre__name">Afrogospel</div><div class="wf-genre__note">Gospel vocals, African percussion</div></div>
-          <div class="wf-wheel__item" style="--a:40deg"><div class="wf-genre__name">Worship</div><div class="wf-genre__note">Slow-build praise sets</div></div>
-          <div class="wf-wheel__item" style="--a:80deg"><div class="wf-genre__name">Afrobeats</div><div class="wf-genre__note">Club-ready West African rhythm</div></div>
-          <div class="wf-wheel__item" style="--a:120deg"><div class="wf-genre__name">Amapiano</div><div class="wf-genre__note">Log-drum grooves</div></div>
-          <div class="wf-wheel__item" style="--a:160deg"><div class="wf-genre__name">Dancehall</div><div class="wf-genre__note">Caribbean riddim</div></div>
-          <div class="wf-wheel__item" style="--a:200deg"><div class="wf-genre__name">Gospel Rap &amp; Hip-Hop</div><div class="wf-genre__note">Faith-driven bars</div></div>
-          <div class="wf-wheel__item" style="--a:240deg"><div class="wf-genre__name">Pop Fusion</div><div class="wf-genre__note">Mainstream hooks, gospel lens</div></div>
-          <div class="wf-wheel__item" style="--a:280deg"><div class="wf-genre__name">Slow Jams</div><div class="wf-genre__note">Late-set wind-downs</div></div>
-          <div class="wf-wheel__item" style="--a:320deg"><div class="wf-genre__name">Live Jam Sessions</div><div class="wf-genre__note">Improvised, in-the-room</div></div>
-        </div>
-
-        <div class="wf-grid wf-grid--3 wf-wheel-fallback rv">
-          <div class="wf-genre"><div class="wf-genre__name">Afrogospel</div><div class="wf-genre__note">The core sound — gospel vocals over African percussion</div></div>
-          <div class="wf-genre"><div class="wf-genre__name">Worship</div><div class="wf-genre__note">Slow-build praise and devotional sets</div></div>
-          <div class="wf-genre"><div class="wf-genre__name">Afrobeats</div><div class="wf-genre__note">Club-ready West African rhythm</div></div>
-          <div class="wf-genre"><div class="wf-genre__name">Amapiano</div><div class="wf-genre__note">Log-drum grooves, South African house</div></div>
-          <div class="wf-genre"><div class="wf-genre__name">Dancehall</div><div class="wf-genre__note">Caribbean riddim woven into the sets</div></div>
-          <div class="wf-genre"><div class="wf-genre__name">Gospel Rap &amp; Hip-Hop</div><div class="wf-genre__note">Faith-driven bars over hard-hitting production</div></div>
-          <div class="wf-genre"><div class="wf-genre__name">Pop Fusion</div><div class="wf-genre__note">Mainstream hooks reworked with a gospel lens</div></div>
-          <div class="wf-genre"><div class="wf-genre__name">Slow Jams</div><div class="wf-genre__note">Late-set wind-downs and intimate moments</div></div>
-          <div class="wf-genre"><div class="wf-genre__name">Live Jam Sessions</div><div class="wf-genre__note">Improvised, in-the-room energy</div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ENSEMBLE -->
-    <section class="wf-section" id="ensemble">
-      <div class="container">
-        <div class="wf-section__head rv"><span class="wf-section__label">The Ensemble</span><h2 class="wf-section__title">100+ <em>Artists</em>, 25 Tapes</h2></div>
-        <p class="wf-section__lede rv" style="margin-bottom:28px">A decade of collaboration across Afrogospel's best-known names and a long list of independent voices. Chip size tracks how often an artist shows up across the catalog.</p>
-        <div class="wf-cloud rv">
-          <span class="wf-chip wf-chip--major">Tim Godfrey<span class="wf-chip__count">×6</span></span>
-          <span class="wf-chip wf-chip--major">Frank Edwards<span class="wf-chip__count">×5</span></span>
-          <span class="wf-chip wf-chip--major">Mike Abdul<span class="wf-chip__count">×5</span></span>
-          <span class="wf-chip wf-chip--major">Nolly<span class="wf-chip__count">×5</span></span>
-          <span class="wf-chip wf-chip--major">Ada Ehi<span class="wf-chip__count">×4</span></span>
-          <span class="wf-chip wf-chip--major">Limoblaze<span class="wf-chip__count">×4</span></span>
-          <span class="wf-chip">Mercy Chinwo</span>
-          <span class="wf-chip">Dunsin Oyekan</span>
-          <span class="wf-chip">Tope Alabi</span>
-          <span class="wf-chip">Sinach</span>
-          <span class="wf-chip">Travis Greene</span>
-          <span class="wf-chip">Moses Bliss</span>
-          <span class="wf-chip">Lecrae</span>
-          <span class="wf-chip">Andy Mineo</span>
-          <span class="wf-chip">Derek Minor</span>
-          <span class="wf-chip">Tedashii</span>
-          <span class="wf-chip">Banky W</span>
-          <span class="wf-chip">Cobhams Asuquo</span>
-          <span class="wf-chip">Eben</span>
-          <span class="wf-chip">Steve Crown</span>
-          <span class="wf-chip">Monique</span>
-          <span class="wf-chip">Onos</span>
-          <span class="wf-chip">Prospa Ochimana</span>
-          <span class="wf-chip">TY Bello</span>
-          <span class="wf-chip">Paul Eneche</span>
-          <span class="wf-chip">Prinx Emmanuel</span>
-          <span class="wf-chip">Testimony Jaga</span>
-          <span class="wf-chip">Sokleva Hughes</span>
-          <span class="wf-chip">Henrisoul</span>
-          <span class="wf-chip">Kellar Thrillz</span>
-          <span class="wf-chip">Sammie Okposo</span>
-          <span class="wf-chip">Kenny Kore</span>
-          <span class="wf-chip">Nikki Laoye</span>
-          <span class="wf-chip">Freke Umoh</span>
-          <span class="wf-chip">Jahdiel</span>
-          <span class="wf-chip">Joe Praize</span>
-          <span class="wf-chip">Bizzle</span>
-          <span class="wf-chip">Canon</span>
-          <span class="wf-chip">Corey Paul</span>
-          <span class="wf-chip">N.I.C.E</span>
-          <span class="wf-chip">Surf Gvng</span>
-          <span class="wf-chip">Gaise</span>
-          <span class="wf-chip">Snatcha</span>
-          <span class="wf-chip">Giljoe</span>
-          <span class="wf-chip">Protek</span>
-          <span class="wf-chip">Maikon West</span>
-          <span class="wf-chip">Ochai Spillz</span>
-          <span class="wf-chip">Obareengy</span>
-          <span class="wf-chip">Tosin Bee</span>
-          <span class="wf-chip">A'dam</span>
-          <span class="wf-chip">O'Tobi</span>
-          <span class="wf-chip">Marizu</span>
-          <span class="wf-chip">Nkay</span>
-          <span class="wf-chip">Nosa</span>
-          <span class="wf-chip">Okeysokey</span>
-          <span class="wf-chip">Lc Beatz</span>
-          <span class="wf-chip">Shola Shittu</span>
-          <span class="wf-chip">Rymsta Ray</span>
-          <span class="wf-chip">Femi Flame</span>
-          <span class="wf-chip">KSB</span>
-          <span class="wf-chip">Terry G</span>
-          <span class="wf-chip">Gamie</span>
-          <span class="wf-chip">Provabs</span>
-          <span class="wf-chip">Ami</span>
-          <span class="wf-chip">Vektor</span>
-          <span class="wf-chip">Ese Clique</span>
-          <span class="wf-chip">Cele Boi</span>
-          <span class="wf-chip">Echow Clay</span>
-          <span class="wf-chip">Ayo Vincent</span>
-          <span class="wf-chip">Micah Banks</span>
-          <span class="wf-chip">Keffee</span>
-          <span class="wf-chip">Great Man</span>
-          <span class="wf-chip">+ 30 more</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- BOOKING -->
-    <section class="wf-section" id="booking">
-      <div class="container">
-        <div class="wf-section__head rv"><span class="wf-section__label">Open Channel</span><h2 class="wf-section__title">Book the <em>Set</em></h2></div>
-        <div class="wf-booking">
-          <div class="wf-panel rv">
-            <p style="color:var(--muted);font-size:15px;line-height:1.75;margin-bottom:22px">Service, celebration, club night, custom commission, or conference — send the date, the room, and the energy you're after. Every set is built from scratch for the event. Bookings are handled through HoWz Studios.</p>
-            <a class="wf-btn wf-btn--primary" href="mailto:howzstd@gmail.com?subject=WealthDJ%20Booking&body=Event%20type%3A%20%0ADate%3A%20%0AVenue%20%2F%20location%3A%20%0AAudience%20size%3A%20%0AVibe%20%2F%20energy%3A%20%0A%0ANotes%3A%20">Book WealthDJ →</a>
-          </div>
-          <div class="wf-panel rv" style="transition-delay:.05s">
-            <div style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">Available For</div>
-            <ul class="wf-avail">
-              <li>Worship Services <span>SUN</span></li>
-              <li>Weddings &amp; Traditions <span>ALL</span></li>
-              <li>Club &amp; Festivals <span>FRI–SAT</span></li>
-              <li>Private Mixes <span>COMM.</span></li>
-              <li>Radio / Livestream <span>MON</span></li>
-              <li>Conferences &amp; Tours <span>BY REQ</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHANNELS -->
-    <section class="wf-section" id="channels">
-      <div class="container">
-        <div class="wf-section__head rv"><span class="wf-section__label">Channels</span><h2 class="wf-section__title">Everywhere <em>Online</em></h2></div>
-        <p class="wf-section__lede rv" style="margin-bottom:28px">Music on Audiomack, SoundCloud, and Spotify. Visuals on Instagram and TikTok. Long-form on Facebook.</p>
-        <div class="wf-grid wf-grid--3 rv">
-          <a class="wf-social" href="https://audiomack.com/wealthdj" target="_blank" rel="noopener noreferrer">
-            <div class="wf-social__platform">Audiomack · Primary</div>
-            <div class="wf-social__handle">@wealthdj</div>
-            <div class="wf-social__desc">Full catalog — 25+ mixtapes, monthly drops.</div>
+        <div class="wf-section__head rv"><span class="wf-section__label">Explore</span><h2 class="wf-section__title">Where to <em>Go</em></h2></div>
+        <div class="wf-grid wf-grid--2 rv">
+          <a class="wf-social" href="sound.html">
+            <div class="wf-social__platform">01 &middot; Genres &amp; Catalog</div>
+            <div class="wf-social__handle">The Sound</div>
+            <div class="wf-social__desc">The genre wheel, the full 25-tape catalog, and what's spinning right now.</div>
           </a>
-          <a class="wf-social" href="https://soundcloud.com/wealthdj" target="_blank" rel="noopener noreferrer">
-            <div class="wf-social__platform">SoundCloud</div>
-            <div class="wf-social__handle">@wealthdj</div>
-            <div class="wf-social__desc">Long-form mixes — Afro-Jubilee, Unchained, XtremGospel.</div>
+          <a class="wf-social" href="ensemble.html">
+            <div class="wf-social__platform">02 &middot; Collaborators</div>
+            <div class="wf-social__handle">The Ensemble</div>
+            <div class="wf-social__desc">100+ artists stitched across a decade of tapes — searchable by name.</div>
           </a>
-          <a class="wf-social" href="https://www.instagram.com/wealth_dj/" target="_blank" rel="noopener noreferrer">
-            <div class="wf-social__platform">Instagram</div>
-            <div class="wf-social__handle">@wealth_dj</div>
-            <div class="wf-social__desc">Booth photography, set clips, behind-the-scenes.</div>
+          <a class="wf-social" href="booking.html">
+            <div class="wf-social__platform">03 &middot; Get WealthDJ</div>
+            <div class="wf-social__handle">Booking</div>
+            <div class="wf-social__desc">Services, weddings, festivals, private mixes, conferences &amp; tours.</div>
           </a>
-          <a class="wf-social" href="https://www.tiktok.com/@wealth_dj" target="_blank" rel="noopener noreferrer">
-            <div class="wf-social__platform">TikTok</div>
-            <div class="wf-social__handle">@wealth_dj</div>
-            <div class="wf-social__desc">Mix snippets, transitions, remix edits.</div>
+          <a class="wf-social" href="channels.html">
+            <div class="wf-social__platform">04 &middot; Stay Connected</div>
+            <div class="wf-social__handle">Channels</div>
+            <div class="wf-social__desc">Every platform WealthDJ lives on, plus the new-tape mailing list.</div>
           </a>
-          <a class="wf-social" href="https://open.spotify.com/user/31smclcocxsf2qlnfvrewr66thhm" target="_blank" rel="noopener noreferrer">
-            <div class="wf-social__platform">Spotify</div>
-            <div class="wf-social__handle">DJ Wealth Playlists</div>
-            <div class="wf-social__desc">Curated playlists — worship, afrobeats, slow jams.</div>
-          </a>
-          <a class="wf-social" href="https://www.facebook.com/wealthdj/" target="_blank" rel="noopener noreferrer">
-            <div class="wf-social__platform">Facebook</div>
-            <div class="wf-social__handle">WealthDJ Official</div>
-            <div class="wf-social__desc">Event announcements, livestream archives.</div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- NEWSLETTER -->
-    <section class="wf-section" aria-label="Newsletter">
-      <div class="container">
-        <div class="wf-panel rv" style="text-align:center;max-width:640px;margin:0 auto">
-          <div style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">Side B</div>
-          <h2 class="wf-section__title" style="margin-bottom:10px">Catch every new tape <em>first</em></h2>
-          <p style="color:var(--muted);font-size:14px;margin-bottom:4px">One email when a mixtape drops. No noise — just the tape, the tracklist, and where to hear it.</p>
-          <form class="wf-nl" id="nlForm" aria-label="Newsletter signup">
-            <input type="email" id="nlEmail" placeholder="Your email" required />
-            <button type="submit">Notify Me</button>
-          </form>
         </div>
       </div>
     </section>

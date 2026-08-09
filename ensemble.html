@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Ensemble — WealthDJ</title>
+  <meta name="description" content="100+ artists stitched across the WealthDJ catalog — search the full Afrogospel ensemble." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page-label="The Ensemble">
+
+  <canvas id="wf-canvas" aria-hidden="true"></canvas>
+  <div class="wf-veil" aria-hidden="true"></div>
+  <div class="wf-cursor" aria-hidden="true"></div>
+  <div class="wf-cursor-dot" aria-hidden="true"></div>
+  <div class="wf-chapter" aria-hidden="true">Now Reading &middot; <strong>The Ensemble</strong></div>
+  <div class="wf-scrubber" aria-hidden="true"><div class="wf-scrubber__fill"><span class="wf-scrubber__head"></span></div></div>
+
+  <nav class="wf-nav" aria-label="Main navigation">
+    <div class="container wf-nav__inner">
+      <a class="wf-brand" href="index.html"><img src="assets/img/djwealth-logo.png" alt="" aria-hidden="true">WealthDJ</a>
+      <button class="wf-nav__toggle" aria-expanded="false" aria-controls="wf-nav-links">Menu ▾</button>
+      <div class="wf-nav__links" id="wf-nav-links">
+        <a href="index.html">Home</a>
+        <a href="sound.html">Sound</a>
+        <a href="ensemble.html">Ensemble</a>
+        <a href="booking.html">Booking</a>
+        <a href="channels.html">Channels</a>
+        <a href="booking.html" class="wf-nav__cta">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="wf-pagehero">
+      <div class="container">
+        <p class="wf-pagehero__eyebrow">Collaborators</p>
+        <h1 class="wf-pagehero__title">The Ensemble</h1>
+        <p class="wf-pagehero__sub">A decade of collaboration across Afrogospel's best-known names and a long list of independent voices. Chip size tracks how often an artist shows up across the catalog.</p>
+      </div>
+    </header>
+
+    <section class="wf-section">
+      <div class="container">
+        <div class="wf-section__head rv"><span class="wf-section__label">01</span><h2 class="wf-section__title">Most <em>Featured</em></h2></div>
+        <div class="wf-grid wf-grid--3 rv">
+          <div class="wf-panel"><div class="wf-social__platform">&times;6 tapes</div><div class="wf-social__handle">Tim Godfrey</div></div>
+          <div class="wf-panel"><div class="wf-social__platform">&times;5 tapes</div><div class="wf-social__handle">Frank Edwards</div></div>
+          <div class="wf-panel"><div class="wf-social__platform">&times;5 tapes</div><div class="wf-social__handle">Mike Abdul</div></div>
+          <div class="wf-panel"><div class="wf-social__platform">&times;5 tapes</div><div class="wf-social__handle">Nolly</div></div>
+          <div class="wf-panel"><div class="wf-social__platform">&times;4 tapes</div><div class="wf-social__handle">Ada Ehi</div></div>
+          <div class="wf-panel"><div class="wf-social__platform">&times;4 tapes</div><div class="wf-social__handle">Limoblaze</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wf-section">
+      <div class="container">
+        <div class="wf-section__head rv"><span class="wf-section__label">02</span><h2 class="wf-section__title">Search the <em>Roster</em></h2></div>
+        <input class="wf-search rv" type="text" placeholder="Search 100+ artists…" data-filter-input="#ensembleCloud .wf-chip" data-filter-count="#ensembleCount" style="margin-bottom:8px" />
+        <div class="wf-count" id="ensembleCount" style="margin-bottom:24px">100+ results</div>
+        <div class="wf-cloud rv" id="ensembleCloud">
+          <span class="wf-chip wf-chip--major">Tim Godfrey<span class="wf-chip__count">×6</span></span>
+          <span class="wf-chip wf-chip--major">Frank Edwards<span class="wf-chip__count">×5</span></span>
+          <span class="wf-chip wf-chip--major">Mike Abdul<span class="wf-chip__count">×5</span></span>
+          <span class="wf-chip wf-chip--major">Nolly<span class="wf-chip__count">×5</span></span>
+          <span class="wf-chip wf-chip--major">Ada Ehi<span class="wf-chip__count">×4</span></span>
+          <span class="wf-chip wf-chip--major">Limoblaze<span class="wf-chip__count">×4</span></span>
+          <span class="wf-chip">Mercy Chinwo</span>
+          <span class="wf-chip">Dunsin Oyekan</span>
+          <span class="wf-chip">Tope Alabi</span>
+          <span class="wf-chip">Sinach</span>
+          <span class="wf-chip">Travis Greene</span>
+          <span class="wf-chip">Moses Bliss</span>
+          <span class="wf-chip">Lecrae</span>
+          <span class="wf-chip">Andy Mineo</span>
+          <span class="wf-chip">Derek Minor</span>
+          <span class="wf-chip">Tedashii</span>
+          <span class="wf-chip">Banky W</span>
+          <span class="wf-chip">Cobhams Asuquo</span>
+          <span class="wf-chip">Eben</span>
+          <span class="wf-chip">Steve Crown</span>
+          <span class="wf-chip">Monique</span>
+          <span class="wf-chip">Onos</span>
+          <span class="wf-chip">Prospa Ochimana</span>
+          <span class="wf-chip">TY Bello</span>
+          <span class="wf-chip">Paul Eneche</span>
+          <span class="wf-chip">Prinx Emmanuel</span>
+          <span class="wf-chip">Testimony Jaga</span>
+          <span class="wf-chip">Sokleva Hughes</span>
+          <span class="wf-chip">Henrisoul</span>
+          <span class="wf-chip">Kellar Thrillz</span>
+          <span class="wf-chip">Sammie Okposo</span>
+          <span class="wf-chip">Kenny Kore</span>
+          <span class="wf-chip">Nikki Laoye</span>
+          <span class="wf-chip">Freke Umoh</span>
+          <span class="wf-chip">Jahdiel</span>
+          <span class="wf-chip">Joe Praize</span>
+          <span class="wf-chip">Bizzle</span>
+          <span class="wf-chip">Canon</span>
+          <span class="wf-chip">Corey Paul</span>
+          <span class="wf-chip">N.I.C.E</span>
+          <span class="wf-chip">Surf Gvng</span>
+          <span class="wf-chip">Gaise</span>
+          <span class="wf-chip">Snatcha</span>
+          <span class="wf-chip">Giljoe</span>
+          <span class="wf-chip">Protek</span>
+          <span class="wf-chip">Maikon West</span>
+          <span class="wf-chip">Ochai Spillz</span>
+          <span class="wf-chip">Obareengy</span>
+          <span class="wf-chip">Tosin Bee</span>
+          <span class="wf-chip">A'dam</span>
+          <span class="wf-chip">O'Tobi</span>
+          <span class="wf-chip">Marizu</span>
+          <span class="wf-chip">Nkay</span>
+          <span class="wf-chip">Nosa</span>
+          <span class="wf-chip">Okeysokey</span>
+          <span class="wf-chip">Lc Beatz</span>
+          <span class="wf-chip">Shola Shittu</span>
+          <span class="wf-chip">Rymsta Ray</span>
+          <span class="wf-chip">Femi Flame</span>
+          <span class="wf-chip">KSB</span>
+          <span class="wf-chip">Terry G</span>
+          <span class="wf-chip">Gamie</span>
+          <span class="wf-chip">Provabs</span>
+          <span class="wf-chip">Ami</span>
+          <span class="wf-chip">Vektor</span>
+          <span class="wf-chip">Ese Clique</span>
+          <span class="wf-chip">Cele Boi</span>
+          <span class="wf-chip">Echow Clay</span>
+          <span class="wf-chip">Ayo Vincent</span>
+          <span class="wf-chip">Micah Banks</span>
+          <span class="wf-chip">Keffee</span>
+          <span class="wf-chip">Great Man</span>
+          <span class="wf-chip">Soulja Boy</span>
+          <span class="wf-chip">Sister Wisdom</span>
+          <span class="wf-chip">Bodiless</span>
+          <span class="wf-chip">Charlz Dogo</span>
+          <span class="wf-chip">SamJamz</span>
+          <span class="wf-chip">Young God</span>
+          <span class="wf-chip">Ola Sax</span>
+          <span class="wf-chip">Alabs</span>
+          <span class="wf-chip">Daddy Verse</span>
+          <span class="wf-chip">Remedy</span>
+          <span class="wf-chip">Deraj</span>
+          <span class="wf-chip">J dust</span>
+          <span class="wf-chip">Nimix</span>
+          <span class="wf-chip">Dj Berry</span>
+          <span class="wf-chip">Dj D-David</span>
+          <span class="wf-chip">Dj X-One</span>
+          <span class="wf-chip">Dj Josh</span>
+          <span class="wf-chip">STO</span>
+          <span class="wf-chip">Charmain2dl</span>
+          <span class="wf-chip">+ more</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wf-footer">
+    <div class="container">
+      <span>© <span id="year"></span> DJ Wealth · Part of HoWz Studios</span>
+      <span>Bookings &nbsp;·&nbsp; <a href="mailto:howzstd@gmail.com">howzstd@gmail.com</a></span>
+    </div>
+  </footer>
+
+  <script src="assets/js/waveform.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

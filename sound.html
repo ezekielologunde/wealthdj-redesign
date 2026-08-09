@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Sound — WealthDJ</title>
+  <meta name="description" content="The WealthDJ genre wheel and the full 25-tape catalog, 2014 to 2026 — Afrogospel, worship, afrobeats, amapiano, dancehall, hip-hop, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://w.soundcloud.com/player/api.js"></script>
+</head>
+<body data-page-label="The Sound">
+
+  <canvas id="wf-canvas" aria-hidden="true"></canvas>
+  <div class="wf-veil" aria-hidden="true"></div>
+  <div class="wf-cursor" aria-hidden="true"></div>
+  <div class="wf-cursor-dot" aria-hidden="true"></div>
+  <div class="wf-chapter" aria-hidden="true">Now Reading &middot; <strong>The Sound</strong></div>
+  <div class="wf-scrubber" aria-hidden="true"><div class="wf-scrubber__fill"><span class="wf-scrubber__head"></span></div></div>
+
+  <nav class="wf-nav" aria-label="Main navigation">
+    <div class="container wf-nav__inner">
+      <a class="wf-brand" href="index.html"><img src="assets/img/djwealth-logo.png" alt="" aria-hidden="true">WealthDJ</a>
+      <button class="wf-nav__toggle" aria-expanded="false" aria-controls="wf-nav-links">Menu ▾</button>
+      <div class="wf-nav__links" id="wf-nav-links">
+        <a href="index.html">Home</a>
+        <a href="sound.html">Sound</a>
+        <a href="ensemble.html">Ensemble</a>
+        <a href="booking.html">Booking</a>
+        <a href="channels.html">Channels</a>
+        <a href="booking.html" class="wf-nav__cta">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="wf-pagehero">
+      <div class="container">
+        <p class="wf-pagehero__eyebrow">Genres &amp; Catalog</p>
+        <h1 class="wf-pagehero__title">The Sound</h1>
+        <p class="wf-pagehero__sub">Worship is the foundation — everything else, from amapiano to hip-hop, gets mixed in around it. Nine lanes on the wheel, 25 tapes in the crate.</p>
+      </div>
+    </header>
+
+    <!-- GENRE WHEEL -->
+    <section class="wf-section" id="wheel">
+      <div class="container">
+        <div class="wf-section__head rv"><span class="wf-section__label">01</span><h2 class="wf-section__title">The <em>Wheel</em></h2></div>
+
+        <div class="wf-wheel rv" aria-hidden="true">
+          <span class="wf-wheel__ring"></span>
+          <span class="wf-wheel__ring wf-wheel__ring--in"></span>
+          <span class="wf-wheel__spoke" style="--a:0deg"></span>
+          <span class="wf-wheel__spoke" style="--a:40deg"></span>
+          <span class="wf-wheel__spoke" style="--a:80deg"></span>
+          <span class="wf-wheel__spoke" style="--a:120deg"></span>
+          <span class="wf-wheel__spoke" style="--a:160deg"></span>
+          <span class="wf-wheel__spoke" style="--a:200deg"></span>
+          <span class="wf-wheel__spoke" style="--a:240deg"></span>
+          <span class="wf-wheel__spoke" style="--a:280deg"></span>
+          <span class="wf-wheel__spoke" style="--a:320deg"></span>
+          <div class="wf-wheel__center"><img src="assets/img/djwealth-logo.png" alt="" /><span>9 Genres</span></div>
+          <div class="wf-wheel__item" style="--a:0deg"><div class="wf-genre__name">Afrogospel</div><div class="wf-genre__note">Gospel vocals, African percussion</div></div>
+          <div class="wf-wheel__item" style="--a:40deg"><div class="wf-genre__name">Worship</div><div class="wf-genre__note">Slow-build praise sets</div></div>
+          <div class="wf-wheel__item" style="--a:80deg"><div class="wf-genre__name">Afrobeats</div><div class="wf-genre__note">Club-ready West African rhythm</div></div>
+          <div class="wf-wheel__item" style="--a:120deg"><div class="wf-genre__name">Amapiano</div><div class="wf-genre__note">Log-drum grooves</div></div>
+          <div class="wf-wheel__item" style="--a:160deg"><div class="wf-genre__name">Dancehall</div><div class="wf-genre__note">Caribbean riddim</div></div>
+          <div class="wf-wheel__item" style="--a:200deg"><div class="wf-genre__name">Gospel Rap &amp; Hip-Hop</div><div class="wf-genre__note">Faith-driven bars</div></div>
+          <div class="wf-wheel__item" style="--a:240deg"><div class="wf-genre__name">Pop Fusion</div><div class="wf-genre__note">Mainstream hooks, gospel lens</div></div>
+          <div class="wf-wheel__item" style="--a:280deg"><div class="wf-genre__name">Slow Jams</div><div class="wf-genre__note">Late-set wind-downs</div></div>
+          <div class="wf-wheel__item" style="--a:320deg"><div class="wf-genre__name">Live Jam Sessions</div><div class="wf-genre__note">Improvised, in-the-room</div></div>
+        </div>
+
+        <div class="wf-grid wf-grid--3 wf-wheel-fallback rv">
+          <div class="wf-genre"><div class="wf-genre__name">Afrogospel</div><div class="wf-genre__note">The core sound — gospel vocals over African percussion</div></div>
+          <div class="wf-genre"><div class="wf-genre__name">Worship</div><div class="wf-genre__note">Slow-build praise and devotional sets</div></div>
+          <div class="wf-genre"><div class="wf-genre__name">Afrobeats</div><div class="wf-genre__note">Club-ready West African rhythm</div></div>
+          <div class="wf-genre"><div class="wf-genre__name">Amapiano</div><div class="wf-genre__note">Log-drum grooves, South African house</div></div>
+          <div class="wf-genre"><div class="wf-genre__name">Dancehall</div><div class="wf-genre__note">Caribbean riddim woven into the sets</div></div>
+          <div class="wf-genre"><div class="wf-genre__name">Gospel Rap &amp; Hip-Hop</div><div class="wf-genre__note">Faith-driven bars over hard-hitting production</div></div>
+          <div class="wf-genre"><div class="wf-genre__name">Pop Fusion</div><div class="wf-genre__note">Mainstream hooks reworked with a gospel lens</div></div>
+          <div class="wf-genre"><div class="wf-genre__name">Slow Jams</div><div class="wf-genre__note">Late-set wind-downs and intimate moments</div></div>
+          <div class="wf-genre"><div class="wf-genre__name">Live Jam Sessions</div><div class="wf-genre__note">Improvised, in-the-room energy</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOW SPINNING -->
+    <section class="wf-section" id="spinning">
+      <div class="container">
+        <div class="wf-section__head rv"><span class="wf-section__label">02</span><h2 class="wf-section__title">Now <em>Spinning</em></h2></div>
+        <div class="wf-player wf-player--banner rv" style="--banner-img:url('/assets/img/wealthdj-banner.webp')">
+          <div class="wf-player__tag">
+            <span class="wf-live"><span class="wf-live__dot" aria-hidden="true"></span>The waveform behind this page reacts to playback</span>
+            <span>Featured mix</span>
+          </div>
+          <iframe id="scPlayer" allow="autoplay" height="140"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/wealthdj/afro-jubilee-mixtape-dj-wealth&color=%23FFCA3A&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"
+            title="WealthDJ — Afro-Jubilee Mixtape on SoundCloud">
+          </iframe>
+          <div class="wf-player__foot">
+            <p class="wf-player__desc">Afro-Jubilee Mixtape — jubilee rhythm meets Afrobeats, slow-jam cuts, and gospel anthems, featuring Frank Edwards, Lc Beatz, Shola Shittu, and Rymsta Ray.</p>
+            <a class="wf-btn wf-btn--sm" href="https://audiomack.com/wealthdj" target="_blank" rel="noopener noreferrer">Full Catalog on Audiomack &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FROM THE CRATE -->
+    <section class="wf-section" id="crate">
+      <div class="container">
+        <div class="wf-section__head rv"><span class="wf-section__label">03</span><h2 class="wf-section__title">From the <em>Crate</em></h2></div>
+        <p class="wf-section__lede rv" style="margin-bottom:28px">Six entry points into the catalog, hand-picked across a decade of tapes.</p>
+        <div class="wf-crate rv">
+          <a class="wf-tape wf-crate--wide" href="https://audiomack.com/wealthdj" target="_blank" rel="noopener noreferrer">
+            <div class="wf-tape__cover wf-tape__cover--art" style="--tape-grad:linear-gradient(135deg,var(--violet),var(--cyan))">
+              <img class="wf-tape__img" src="assets/img/covers/afrogospel-juice.webp" alt="" loading="lazy">
+              <div class="wf-tape__num">Tape / 024 &middot; 2021</div>
+              <div class="wf-tape__title">AfroGospel Juice</div>
+            </div>
+            <div class="wf-tape__body">
+              <div class="wf-tape__name">AfroGospel Juice Mixtape</div>
+              <div class="wf-tape__feat">Feat. Nolly, Moses Bliss, Ochai Spillz, Obareengy, Echow Clay &amp; more</div>
+            </div>
+          </a>
+          <a class="wf-tape" href="https://audiomack.com/wealthdj" target="_blank" rel="noopener noreferrer">
+            <div class="wf-tape__cover wf-tape__cover--art" style="--tape-grad:linear-gradient(135deg,var(--gold),var(--magenta))">
+              <img class="wf-tape__img" src="assets/img/covers/purepraises-2018.webp" alt="" loading="lazy">
+              <div class="wf-tape__num">Tape / 013 &middot; 2018</div>
+              <div class="wf-tape__title">Purepraises</div>
+            </div>
+            <div class="wf-tape__body">
+              <div class="wf-tape__name">Worship Mixtape — Purepraises '18</div>
+              <div class="wf-tape__feat">Feat. Mercy Chinwo, Tope Alabi, Dunsin Oyekan, Tim Godfrey, Travis Greene</div>
+            </div>
+          </a>
+          <a class="wf-tape" href="https://audiomack.com/wealthdj" target="_blank" rel="noopener noreferrer">
+            <div class="wf-tape__cover wf-tape__cover--art" style="--tape-grad:linear-gradient(135deg,var(--magenta),var(--violet))">
+              <img class="wf-tape__img" src="assets/img/covers/howzparty.webp" alt="" loading="lazy">
+              <div class="wf-tape__num">Tape / 012 &middot; 2018</div>
+              <div class="wf-tape__title">HoWz Party</div>
+            </div>
+            <div class="wf-tape__body">
+              <div class="wf-tape__name">HoWzParty Mixtape</div>
+              <div class="wf-tape__feat">Feat. Tim Godfrey, Mike Abdul, Nolly, Tosin Bee, A'dam, Henrisoul</div>
+            </div>
+          </a>
+          <a class="wf-tape" href="https://audiomack.com/wealthdj" target="_blank" rel="noopener noreferrer">
+            <div class="wf-tape__cover wf-tape__cover--art" style="--tape-grad:linear-gradient(135deg,var(--cyan),var(--gold))">
+              <img class="wf-tape__img" src="assets/img/covers/fearless.webp" alt="" loading="lazy">
+              <div class="wf-tape__num">Tape / 009 &middot; 2017</div>
+              <div class="wf-tape__title">Fearless</div>
+            </div>
+            <div class="wf-tape__body">
+              <div class="wf-tape__name">Fearless Mixtape</div>
+              <div class="wf-tape__feat">Feat. Cobhams Asuquo, Dunsin Oyekan, Steve Crown, Sinach, Eben, Onos</div>
+            </div>
+          </a>
+          <a class="wf-tape" href="https://audiomack.com/wealthdj" target="_blank" rel="noopener noreferrer">
+            <div class="wf-tape__cover wf-tape__cover--art" style="--tape-grad:linear-gradient(135deg,var(--violet),var(--gold))">
+              <img class="wf-tape__img" src="assets/img/covers/alert-vibes-2022.webp" alt="" loading="lazy">
+              <div class="wf-tape__num">Tape / 025 &middot; 2021</div>
+              <div class="wf-tape__title">2022 Alert</div>
+            </div>
+            <div class="wf-tape__body">
+              <div class="wf-tape__name">2022 Alert Vibes</div>
+              <div class="wf-tape__feat">Feat. Moses Bliss, Banky W, Limoblaze, Maikon West, Prinx Emmanuel</div>
+            </div>
+          </a>
+          <a class="wf-tape wf-crate--wide" href="https://audiomack.com/wealthdj" target="_blank" rel="noopener noreferrer">
+            <div class="wf-tape__cover wf-tape__cover--art" style="--tape-grad:linear-gradient(135deg,var(--gold),var(--cyan))">
+              <img class="wf-tape__img" src="assets/img/covers/frank-edwards-p3.webp" alt="" loading="lazy">
+              <div class="wf-tape__num">Tapes / 008 &middot; 004 &middot; 023 &middot; 2015&ndash;2020</div>
+              <div class="wf-tape__title">Best of Frank Edwards</div>
+            </div>
+            <div class="wf-tape__body">
+              <div class="wf-tape__name">Best of Frank Edwards — Parts 1, 2 &amp; 3</div>
+              <div class="wf-tape__feat">A three-part legacy mix: the complete Frank Edwards canon, sequenced for a long service</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL CATALOG -->
+    <section class="wf-section" id="catalog">
+      <div class="container">
+        <div class="wf-section__head rv"><span class="wf-section__label">04</span><h2 class="wf-section__title">The Full <em>Catalog</em></h2></div>
+        <p class="wf-section__lede rv" style="margin-bottom:16px">25 tapes, 2014 &rarr; 2026, all on Audiomack. Search by title, artist, or genre.</p>
+        <input class="wf-search rv" type="text" placeholder="Search the catalog…" data-filter-input=".wf-catalog tbody tr" data-filter-count="#catalogCount" style="margin-bottom:8px" />
+        <div class="wf-count" id="catalogCount" style="margin-bottom:20px">25 results</div>
+        <div class="wf-panel rv" style="overflow-x:auto;padding:12px 20px">
+          <table class="wf-catalog">
+            <thead><tr><th>#</th><th>Title</th><th>Featured</th><th>Date</th><th>Genre</th></tr></thead>
+            <tbody>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">025</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/alert-vibes-2022.webp" alt="" loading="lazy"></div>2022 Alert Vibes</div></td><td>Moses Bliss, Banky W, Limoblaze, Maikon West, Prinx Emmanuel, Ola Sax</td><td>Dec '21</td><td><span class="wf-catalog__genre">Afropop</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">024</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/afrogospel-juice.webp" alt="" loading="lazy"></div>AfroGospel Juice Mixtape</div></td><td>Nolly, Moses Bliss, Ochai Spillz, Obareengy, Echow Clay, Maikon West</td><td>Nov '21</td><td><span class="wf-catalog__genre">Party</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">023</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/frank-edwards-p3.webp" alt="" loading="lazy"></div>Best of Frank Edwards (Part 3)</div></td><td>Frank Edwards</td><td>Nov '20</td><td><span class="wf-catalog__genre">DJ Mix</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">022</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/superstars-blessings.webp" alt="" loading="lazy"></div>Superstars Blessings Mixtape</div></td><td>Ada Ehi, Testimony Jaga, Prinx Emmanuel, Soulja Boy, Sister Wisdom</td><td>Sep '20</td><td><span class="wf-catalog__genre">DJ Mix</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">021</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/testimony.webp" alt="" loading="lazy"></div>DJ Wealth — Testimony Mixtape</div></td><td>Frank Edwards, Eben, Tim Godfrey, Nolly, Testimony Jaga, Kellar Thrillz</td><td>Jul '20</td><td><span class="wf-catalog__genre">Afropop</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">020</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/xi-mixtape.webp" alt="" loading="lazy"></div>DJ Wealth XI Mixtape</div></td><td>Giljoe, Bodiless, Nkay, Limoblaze, Tim Godfrey</td><td>Jul '20</td><td><span class="wf-catalog__genre">Workout</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">019</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"></div>Afro-Jubilee Mixtape</div></td><td>Rymsta Ray, Frank Edwards, Lc Beatz, Shola Shittu</td><td>Jul '20</td><td><span class="wf-catalog__genre">Dancehall</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">018</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/flux.webp" alt="" loading="lazy"></div>Flux Mixtape</div></td><td>Limoblaze, Giljoe, Protek, Henrisoul, Marizu, Charlz Dogo, Nkay</td><td>May '20</td><td><span class="wf-catalog__genre">Hip-Hop</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">017</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/mike-abdul-best-of.webp" alt="" loading="lazy"></div>Best of Mike Abdul</div></td><td>Mike Abdul</td><td>Apr '20</td><td><span class="wf-catalog__genre">DJ Mix</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">016</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/january-slos.webp" alt="" loading="lazy"></div>January Slo's</div></td><td>Limoblaze, Giljoe, Protek, Henrisoul, SamJamz, Young God</td><td>Feb '20</td><td><span class="wf-catalog__genre">Slow Jam</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">015</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/church-street.webp" alt="" loading="lazy"></div>Church Street</div></td><td>Gaise, Snatcha, Testimony Jaga, Tim Godfrey, Ada, Mike Abdul, Joe Praize</td><td>Mar '19</td><td><span class="wf-catalog__genre">Hip-Hop</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">014</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/hello.webp" alt="" loading="lazy"></div>Hello · DJ Wealth</div></td><td>Nosa, Alabs, Daddy Verse, Sokleva Hughes, Nolly, Mike Abdul, Kellar Thrillz</td><td>Mar '18</td><td><span class="wf-catalog__genre">Hip-Hop</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">013</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/purepraises-2018.webp" alt="" loading="lazy"></div>Worship Mixtape · Purepraises '18</div></td><td>Paul Eneche, Prospa, Ty Bello, Mercy Chinwo, Tope Alabi, Dunsin Oyekan, Travis Greene</td><td>Sep '18</td><td><span class="wf-catalog__genre">Worship</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">012</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/howzparty.webp" alt="" loading="lazy"></div>HoWzParty Mixtape</div></td><td>Tosin Bee, A'dam, Remedy, Tim Godfrey, Henrisoul, Kellar Thrillz, Mike Abdul</td><td>Feb '18</td><td><span class="wf-catalog__genre">Dancehall</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">011</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"></div>New Wave</div></td><td>Lecrae, Derek Minor, Andy Mineo, Tedashii, Deraj, N.I.C.E, Corey Paul, Bizzle</td><td>Feb '18</td><td><span class="wf-catalog__genre">Pop Rap</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">010</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/winter-jamz-2017.webp" alt="" loading="lazy"></div>Winter-Jamz 2017</div></td><td>Ada Ehi, Mike Abdul, J dust, O'Tobi, Nimix, Okeysokey, Nolly</td><td>Dec '17</td><td><span class="wf-catalog__genre">Afro-Swing</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">009</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/fearless.webp" alt="" loading="lazy"></div>Fearless Mixtape</div></td><td>Cobhams Asuquo, Dunsin Oyekan, Steve Crown, Eben, Sinach, Monique, Prospa Ochima</td><td>Oct '17</td><td><span class="wf-catalog__genre">Slow Jam</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">008</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/frank-edwards-p1.webp" alt="" loading="lazy"></div>Best of Frank Edwards (Part 1)</div></td><td>Frank Edwards</td><td>Jul '17</td><td><span class="wf-catalog__genre">DJ Mix</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">007</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"></div>Unchained Mixtape</div></td><td>Dj Berry, Dj D-David, Dj X-One, Dj Josh, Limoblaze, Sokleva Hughes, Nolly</td><td>May '16</td><td><span class="wf-catalog__genre">Boom Bap</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">006</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"></div>DJ Wealth Superstars Vol 8</div></td><td>Eben, Tim Godfrey, Ese Clique, Kenny Kore, Nikki-Laoye, Monique, Sammie Okposo</td><td>Mar '16</td><td><span class="wf-catalog__genre">Hip-Hop</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">005</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/superstars-vol3.webp" alt="" loading="lazy"></div>#Superstars Mixtape Vol 3</div></td><td>Provabs, Ami, Vektor, Sokleva Hughes, Ada Ehi, Lc Beatz, STO, Charmain2dl</td><td>Feb '16</td><td><span class="wf-catalog__genre">DJ Mix</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">004</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/frank-edwards-p1.webp" alt="" loading="lazy"></div>Best of Frank Edwards (Part 2)</div></td><td>Frank Edwards</td><td>Jul '15</td><td><span class="wf-catalog__genre">DJ Mix</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">003</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"></div>XtremGospel Mixtape</div></td><td>Dj X-One, Jahdiel, Frank Edwards, Freke Umoh, Mike Abdul</td><td>Feb '15</td><td><span class="wf-catalog__genre">Fusion</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">002</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/superstars-dj-wealth.webp" alt="" loading="lazy"></div>#Superstars DJ Wealth</div></td><td>Sokleva Hughes, Ada Ehi, Femi Flame, KSB, Okeysokey, Terry G, Gamie</td><td>Jan '15</td><td><span class="wf-catalog__genre">DJ Mix</span></td></tr>
+              <tr onclick="window.open('https://audiomack.com/wealthdj','_blank')"><td class="wf-catalog__num">001</td><td class="wf-catalog__title"><div class="wf-catalog__row"><div class="wf-catalog__thumb"><img src="assets/img/covers/superstars-vol1.webp" alt="" loading="lazy"></div>DJ Wealth · Superstars Vol 1</div></td><td>Tim Godfrey, Frank Edwards, Mike Abdul, Keffee, Micah Banks, Ayo Vincent, STO</td><td>Feb '14</td><td><span class="wf-catalog__genre">Dancehall</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="text-align:center;margin-top:24px">
+          <a class="wf-btn wf-btn--primary" href="https://audiomack.com/wealthdj" target="_blank" rel="noopener noreferrer">Hear Every Tape on Audiomack &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="wf-footer">
+    <div class="container">
+      <span>© <span id="year"></span> DJ Wealth · Part of HoWz Studios</span>
+      <span>Bookings &nbsp;·&nbsp; <a href="mailto:howzstd@gmail.com">howzstd@gmail.com</a></span>
+    </div>
+  </footer>
+
+  <script src="assets/js/waveform.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

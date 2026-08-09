@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking — WealthDJ</title>
+  <meta name="description" content="Book DJ Wealth for worship services, weddings, festivals, private mixes, radio, or conferences. Bookings handled through HoWz Studios." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page-label="Booking">
+
+  <canvas id="wf-canvas" aria-hidden="true"></canvas>
+  <div class="wf-veil" aria-hidden="true"></div>
+  <div class="wf-cursor" aria-hidden="true"></div>
+  <div class="wf-cursor-dot" aria-hidden="true"></div>
+  <div class="wf-chapter" aria-hidden="true">Now Reading &middot; <strong>Booking</strong></div>
+  <div class="wf-scrubber" aria-hidden="true"><div class="wf-scrubber__fill"><span class="wf-scrubber__head"></span></div></div>
+
+  <nav class="wf-nav" aria-label="Main navigation">
+    <div class="container wf-nav__inner">
+      <a class="wf-brand" href="index.html"><img src="assets/img/djwealth-logo.png" alt="" aria-hidden="true">WealthDJ</a>
+      <button class="wf-nav__toggle" aria-expanded="false" aria-controls="wf-nav-links">Menu ▾</button>
+      <div class="wf-nav__links" id="wf-nav-links">
+        <a href="index.html">Home</a>
+        <a href="sound.html">Sound</a>
+        <a href="ensemble.html">Ensemble</a>
+        <a href="booking.html">Booking</a>
+        <a href="channels.html">Channels</a>
+        <a href="booking.html" class="wf-nav__cta">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="wf-pagehero">
+      <div class="container">
+        <p class="wf-pagehero__eyebrow">Open Channel</p>
+        <h1 class="wf-pagehero__title">Book the Set</h1>
+        <p class="wf-pagehero__sub">Service, celebration, club night, custom commission, or conference — send the date, the room, and the energy you're after. Every set is built from scratch for the event.</p>
+      </div>
+    </header>
+
+    <section class="wf-section">
+      <div class="container">
+        <div class="wf-booking">
+          <div class="wf-panel rv">
+            <div class="wf-section__label" style="margin-bottom:16px">01 &middot; Reach Out</div>
+            <p style="color:var(--muted);font-size:15px;line-height:1.75;margin-bottom:22px">Bookings are handled through HoWz Studios. Include the event type, date, venue, audience size, and the vibe you're going for — every reply gets a real answer, not a form letter.</p>
+            <a class="wf-btn wf-btn--primary" href="mailto:howzstd@gmail.com?subject=WealthDJ%20Booking&body=Event%20type%3A%20%0ADate%3A%20%0AVenue%20%2F%20location%3A%20%0AAudience%20size%3A%20%0AVibe%20%2F%20energy%3A%20%0A%0ANotes%3A%20">Book WealthDJ &rarr;</a>
+            <div style="margin-top:28px;padding-top:22px;border-top:1px solid var(--edge)">
+              <div class="wf-section__label" style="margin-bottom:10px">Direct Line</div>
+              <a href="mailto:howzstd@gmail.com" style="font-family:var(--display);font-weight:700;color:var(--bone);font-size:16px">howzstd@gmail.com</a>
+            </div>
+          </div>
+          <div class="wf-panel rv" style="transition-delay:.05s">
+            <div class="wf-section__label" style="margin-bottom:16px">02 &middot; Available For</div>
+            <ul class="wf-avail">
+              <li>Worship Services <span>SUN</span></li>
+              <li>Weddings &amp; Traditions <span>ALL</span></li>
+              <li>Club &amp; Festivals <span>FRI&ndash;SAT</span></li>
+              <li>Private Mixes <span>COMM.</span></li>
+              <li>Radio / Livestream <span>MON</span></li>
+              <li>Conferences &amp; Tours <span>BY REQ</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wf-section">
+      <div class="container">
+        <div class="wf-section__head rv"><span class="wf-section__label">03</span><h2 class="wf-section__title">Based <em>Here</em>, Booking <em>Anywhere</em></h2></div>
+        <div class="wf-grid wf-grid--3 rv">
+          <div class="wf-stat"><div class="wf-stat__label">Home Base</div><div class="wf-stat__num" style="font-size:22px">United States</div><div class="wf-stat__foot">Available to travel for the right date</div></div>
+          <div class="wf-stat"><div class="wf-stat__label">Label / Home</div><div class="wf-stat__num" style="font-size:22px">HoWz Studios</div><div class="wf-stat__foot">Design, tech, photography &amp; sound under one roof</div></div>
+          <div class="wf-stat"><div class="wf-stat__label">Reach</div><div class="wf-stat__num" style="font-size:22px">Worldwide</div><div class="wf-stat__foot">Global bookings welcome</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wf-footer">
+    <div class="container">
+      <span>© <span id="year"></span> DJ Wealth · Part of HoWz Studios</span>
+      <span>Bookings &nbsp;·&nbsp; <a href="mailto:howzstd@gmail.com">howzstd@gmail.com</a></span>
+    </div>
+  </footer>
+
+  <script src="assets/js/waveform.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

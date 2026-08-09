@@ -16,6 +16,12 @@
     });
   }
 
+  var here = (location.pathname.split('/').pop() || 'index.html');
+  document.querySelectorAll('.wf-nav__links a[href]').forEach(function (a) {
+    var href = a.getAttribute('href').split('/').pop();
+    if (href === here || (href === 'index.html' && here === '')) a.setAttribute('aria-current', 'page');
+  });
+
   var revealEls = document.querySelectorAll('.rv');
   if (revealEls.length) {
     if (reduceMotion || !('IntersectionObserver' in window)) {
@@ -33,11 +39,9 @@
   var cursor = document.querySelector('.wf-cursor');
   var cursorDot = document.querySelector('.wf-cursor-dot');
   if (cursor && cursorDot && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    var cx = 0, cy = 0;
     window.addEventListener('pointermove', function (e) {
-      cx = e.clientX; cy = e.clientY;
-      cursorDot.style.transform = 'translate(' + cx + 'px,' + cy + 'px)';
-      cursor.style.transform = 'translate(' + cx + 'px,' + cy + 'px)';
+      cursorDot.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)';
+      cursor.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)';
     });
     document.querySelectorAll('a, button, input').forEach(function (el) {
       el.addEventListener('mouseenter', function () { document.body.classList.add('wf-cursor-hover'); });
@@ -47,15 +51,7 @@
 
   var scrubFill = document.querySelector('.wf-scrubber__fill');
   var chapterEl = document.querySelector('.wf-chapter');
-  var chapters = [
-    { id: 'top', label: 'Intro' },
-    { id: 'spinning', label: 'Now Spinning' },
-    { id: 'sound', label: 'The Sound' },
-    { id: 'ensemble', label: 'The Ensemble' },
-    { id: 'booking', label: 'Booking' },
-    { id: 'channels', label: 'Channels' }
-  ].map(function (c) { return { el: document.getElementById(c.id), label: c.label }; }).filter(function (c) { return c.el; });
-
+  var pageLabel = document.body.getAttribute('data-page-label') || document.title;
   if (scrubFill || chapterEl) {
     var scrubTicking = false;
     function updateScrub() {
@@ -63,13 +59,7 @@
       var scrollable = doc.scrollHeight - doc.clientHeight;
       var pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
       if (scrubFill) scrubFill.style.width = pct.toFixed(2) + '%';
-      if (chapterEl && chapters.length) {
-        var current = chapters[0];
-        for (var i = 0; i < chapters.length; i++) {
-          if (chapters[i].el.getBoundingClientRect().top < window.innerHeight * 0.5) current = chapters[i];
-        }
-        chapterEl.innerHTML = 'Now Reading &middot; <strong>' + current.label + '</strong>';
-      }
+      if (chapterEl) chapterEl.innerHTML = 'Now Reading &middot; <strong>' + pageLabel + '</strong>';
       scrubTicking = false;
     }
     window.addEventListener('scroll', function () {
@@ -77,6 +67,25 @@
     }, { passive: true });
     updateScrub();
   }
+
+  document.querySelectorAll('[data-filter-input]').forEach(function (input) {
+    var targetSel = input.getAttribute('data-filter-input');
+    var items = Array.prototype.slice.call(document.querySelectorAll(targetSel));
+    var countEl = document.querySelector(input.getAttribute('data-filter-count') || '');
+    function apply() {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      items.forEach(function (item) {
+        var text = (item.getAttribute('data-filter-text') || item.textContent).toLowerCase();
+        var match = !q || text.indexOf(q) !== -1;
+        item.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      if (countEl) countEl.textContent = shown + (shown === 1 ? ' result' : ' results');
+    }
+    input.addEventListener('input', apply);
+    apply();
+  });
 
   var nlForm = document.getElementById('nlForm');
   if (nlForm) {

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Channels — WealthDJ</title>
+  <meta name="description" content="Every platform DJ Wealth lives on — Audiomack, SoundCloud, Spotify, Instagram, TikTok, Facebook — plus the new-tape mailing list." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page-label="Channels">
+
+  <canvas id="wf-canvas" aria-hidden="true"></canvas>
+  <div class="wf-veil" aria-hidden="true"></div>
+  <div class="wf-cursor" aria-hidden="true"></div>
+  <div class="wf-cursor-dot" aria-hidden="true"></div>
+  <div class="wf-chapter" aria-hidden="true">Now Reading &middot; <strong>Channels</strong></div>
+  <div class="wf-scrubber" aria-hidden="true"><div class="wf-scrubber__fill"><span class="wf-scrubber__head"></span></div></div>
+
+  <nav class="wf-nav" aria-label="Main navigation">
+    <div class="container wf-nav__inner">
+      <a class="wf-brand" href="index.html"><img src="assets/img/djwealth-logo.png" alt="" aria-hidden="true">WealthDJ</a>
+      <button class="wf-nav__toggle" aria-expanded="false" aria-controls="wf-nav-links">Menu ▾</button>
+      <div class="wf-nav__links" id="wf-nav-links">
+        <a href="index.html">Home</a>
+        <a href="sound.html">Sound</a>
+        <a href="ensemble.html">Ensemble</a>
+        <a href="booking.html">Booking</a>
+        <a href="channels.html">Channels</a>
+        <a href="booking.html" class="wf-nav__cta">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="wf-pagehero">
+      <div class="container">
+        <p class="wf-pagehero__eyebrow">Stay Connected</p>
+        <h1 class="wf-pagehero__title">Everywhere Online</h1>
+        <p class="wf-pagehero__sub">Music on Audiomack, SoundCloud, and Spotify. Visuals on Instagram and TikTok. Long-form on Facebook.</p>
+      </div>
+    </header>
+
+    <section class="wf-section">
+      <div class="container">
+        <div class="wf-section__head rv"><span class="wf-section__label">01</span><h2 class="wf-section__title">Every <em>Platform</em></h2></div>
+        <div class="wf-grid wf-grid--3 rv">
+          <a class="wf-social" href="https://audiomack.com/wealthdj" target="_blank" rel="noopener noreferrer">
+            <div class="wf-social__avatar wf-social__avatar--mark" aria-hidden="true"><img src="assets/img/djwealth-logo.png" alt=""></div>
+            <div class="wf-social__platform">Audiomack &middot; Primary</div>
+            <div class="wf-social__handle">@wealthdj</div>
+            <div class="wf-social__desc">Full catalog — 25 mixtapes, monthly drops.</div>
+          </a>
+          <a class="wf-social" href="https://soundcloud.com/wealthdj" target="_blank" rel="noopener noreferrer">
+            <div class="wf-social__avatar wf-social__avatar--mark" aria-hidden="true"><img src="assets/img/djwealth-logo.png" alt=""></div>
+            <div class="wf-social__platform">SoundCloud</div>
+            <div class="wf-social__handle">@wealthdj</div>
+            <div class="wf-social__desc">Long-form mixes — Afro-Jubilee, Unchained, XtremGospel.</div>
+          </a>
+          <a class="wf-social" href="https://www.instagram.com/wealth_dj/" target="_blank" rel="noopener noreferrer">
+            <div class="wf-social__avatar"><img src="assets/img/instagram-profile.jpg" alt=""></div>
+            <div class="wf-social__platform">Instagram</div>
+            <div class="wf-social__handle">@wealth_dj</div>
+            <div class="wf-social__desc">Booth photography, set clips, behind-the-scenes.</div>
+          </a>
+          <a class="wf-social" href="https://www.tiktok.com/@wealth_dj" target="_blank" rel="noopener noreferrer">
+            <div class="wf-social__avatar"><img src="assets/img/tiktok-profile.jpg" alt=""></div>
+            <div class="wf-social__platform">TikTok</div>
+            <div class="wf-social__handle">@wealth_dj</div>
+            <div class="wf-social__desc">Mix snippets, transitions, remix edits.</div>
+          </a>
+          <a class="wf-social" href="https://open.spotify.com/user/31smclcocxsf2qlnfvrewr66thhm" target="_blank" rel="noopener noreferrer">
+            <div class="wf-social__avatar"><img src="assets/img/spotify-profile.jpg" alt=""></div>
+            <div class="wf-social__platform">Spotify</div>
+            <div class="wf-social__handle">DJ Wealth Playlists</div>
+            <div class="wf-social__desc">Curated playlists — worship, afrobeats, slow jams.</div>
+          </a>
+          <a class="wf-social" href="https://www.facebook.com/wealthdj/" target="_blank" rel="noopener noreferrer">
+            <div class="wf-social__avatar"><img src="assets/img/facebook-profile.jpg" alt=""></div>
+            <div class="wf-social__platform">Facebook</div>
+            <div class="wf-social__handle">WealthDJ Official</div>
+            <div class="wf-social__desc">Event announcements, livestream archives.</div>
+          </a>
+          <a class="wf-social" href="https://www.youtube.com/channel/UCgRxl3O91qWH1mgXP-CYFUA" target="_blank" rel="noopener noreferrer">
+            <div class="wf-social__avatar wf-social__avatar--mark" aria-hidden="true"><img src="assets/img/djwealth-logo.png" alt=""></div>
+            <div class="wf-social__platform">YouTube</div>
+            <div class="wf-social__handle">DJ Wealth</div>
+            <div class="wf-social__desc">Subscribe now — full mix uploads coming soon.</div>
+          </a>
+          <a class="wf-social" href="https://x.com/wealthdj" target="_blank" rel="noopener noreferrer">
+            <div class="wf-social__avatar wf-social__avatar--mark" aria-hidden="true"><img src="assets/img/djwealth-logo.png" alt=""></div>
+            <div class="wf-social__platform">X / Twitter</div>
+            <div class="wf-social__handle">@wealthdj</div>
+            <div class="wf-social__desc">Drop alerts, quick takes, tape links.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wf-section" aria-label="Cover wall">
+      <div class="container">
+        <div class="wf-section__head"><span class="wf-section__label">02</span><h2 class="wf-section__title">The <em>Cover Wall</em></h2></div>
+        <p class="wf-section__lede" style="margin-bottom:24px">A decade of crate art, scrolling by. Tap any cover to hear it on Audiomack.</p>
+      </div>
+      <a class="wf-marquee" href="https://audiomack.com/wealthdj" target="_blank" rel="noopener noreferrer" aria-label="Browse the full catalog on Audiomack">
+        <div class="wf-marquee__track">
+          <img src="assets/img/covers/superstars-vol1.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/superstars-dj-wealth.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/superstars-vol3.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/frank-edwards-p1.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/fearless.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/winter-jamz-2017.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/howzparty.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/purepraises-2018.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/hello.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/church-street.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/january-slos.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/mike-abdul-best-of.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/flux.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/testimony.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/xi-mixtape.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/superstars-blessings.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/frank-edwards-p3.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/afrogospel-juice.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/alert-vibes-2022.webp" alt="" loading="lazy">
+          <img src="assets/img/covers/superstars-vol1.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/superstars-dj-wealth.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/superstars-vol3.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/frank-edwards-p1.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/fearless.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/winter-jamz-2017.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/howzparty.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/purepraises-2018.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/hello.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/church-street.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/january-slos.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/mike-abdul-best-of.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/flux.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/testimony.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/xi-mixtape.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/superstars-blessings.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/frank-edwards-p3.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/afrogospel-juice.webp" alt="" loading="lazy" aria-hidden="true">
+          <img src="assets/img/covers/alert-vibes-2022.webp" alt="" loading="lazy" aria-hidden="true">
+        </div>
+      </a>
+    </section>
+
+    <section class="wf-section" aria-label="Newsletter">
+      <div class="container">
+        <div class="wf-panel rv" style="text-align:center;max-width:640px;margin:0 auto">
+          <div class="wf-section__label" style="margin-bottom:12px">Side B</div>
+          <h2 class="wf-section__title" style="margin-bottom:10px">Catch every new tape <em>first</em></h2>
+          <p style="color:var(--muted);font-size:14px;margin-bottom:4px">One email when a mixtape drops. No noise — just the tape, the tracklist, and where to hear it.</p>
+          <form class="wf-nl" id="nlForm" aria-label="Newsletter signup">
+            <input type="email" id="nlEmail" placeholder="Your email" required />
+            <button type="submit">Notify Me</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wf-footer">
+    <div class="container">
+      <span>© <span id="year"></span> DJ Wealth · Part of HoWz Studios</span>
+      <span>Bookings &nbsp;·&nbsp; <a href="mailto:howzstd@gmail.com">howzstd@gmail.com</a></span>
+    </div>
+  </footer>
+
+  <script src="assets/js/waveform.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
