@@ -351,3 +351,52 @@ body.has-radiobar { padding-bottom: 64px; }
 .rv { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
 .rv.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; } }
+
+/* ============================================================
+   HoWz Studios — mothership layer
+   Shared design tokens above; these are the components added
+   for the HoWz hub, division portals, photography gallery, and
+   placeholder "craft" tiles on the design/branding/cinema pages.
+   ============================================================ */
+
+/* ---------------- Mothership brand wrap (division nav) ---------------- */
+.wf-nav__brandwrap { display: flex; flex-direction: column; gap: 3px; }
+.wf-mothership { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); transition: color .18s; }
+.wf-mothership:hover { color: var(--gold); }
+
+/* ---------------- Division portal cards (HoWz hub) ---------------- */
+.wf-portals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+@media (max-width: 900px) { .wf-portals { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .wf-portals { grid-template-columns: 1fr; } }
+.wf-portal { position: relative; padding: 30px 24px; border-radius: var(--radius); background: var(--panel); border: 1px solid var(--edge); overflow: hidden; transition: border-color .2s, transform .2s; min-height: 210px; display: flex; flex-direction: column; justify-content: flex-end; }
+.wf-portal::before { content: ''; position: absolute; inset: 0; background: var(--portal-grad, var(--gradient)); opacity: .14; transition: opacity .25s; }
+.wf-portal:hover { border-color: var(--edge-2); transform: translateY(-4px); }
+.wf-portal:hover::before { opacity: .26; }
+.wf-portal__icon { font-size: 26px; margin-bottom: 14px; position: relative; z-index: 1; }
+.wf-portal__label { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; position: relative; z-index: 1; }
+.wf-portal__title { font-family: var(--display); font-weight: 800; font-size: 21px; color: var(--bone); margin-bottom: 8px; position: relative; z-index: 1; }
+.wf-portal__desc { font-size: 12.5px; color: var(--muted); line-height: 1.55; position: relative; z-index: 1; }
+.wf-portal--wide { grid-column: span 2; }
+@media (max-width: 640px) { .wf-portal--wide { grid-column: span 1; } }
+
+/* ---------------- Photography gallery ---------------- */
+.wf-gallery { column-count: 3; column-gap: 14px; }
+@media (max-width: 900px) { .wf-gallery { column-count: 2; } }
+@media (max-width: 560px) { .wf-gallery { column-count: 1; } }
+.wf-shot { display: block; position: relative; margin: 0 0 14px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--edge); break-inside: avoid; }
+.wf-shot img { width: 100%; display: block; transition: transform .5s ease; }
+.wf-shot:hover img { transform: scale(1.045); }
+.wf-shot__cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 14px 12px; background: linear-gradient(0deg, rgba(5,3,12,0.92), transparent); opacity: 0; transition: opacity .25s; }
+.wf-shot:hover .wf-shot__cap { opacity: 1; }
+.wf-shot__cap strong { display: block; font-family: var(--display); font-size: 12.5px; color: var(--bone); }
+.wf-shot__cap span { font-family: var(--mono); font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+
+/* ---------------- Craft / case-study tiles (design, branding, cinema) ---------------- */
+.wf-craft { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+@media (max-width: 640px) { .wf-craft { grid-template-columns: 1fr; } }
+.wf-soon { display: flex; flex-direction: column; align-items: flex-start; padding: 26px 24px; min-height: 200px; border-radius: var(--radius); background: var(--panel); border: 1px dashed var(--edge-2); position: relative; overflow: hidden; }
+.wf-soon::before { content: ''; position: absolute; inset: 0; background: var(--soon-grad, var(--gradient)); opacity: .09; }
+.wf-soon__num { font-family: var(--mono); font-size: 10px; color: var(--faint); position: relative; z-index: 1; }
+.wf-soon__title { font-family: var(--display); font-weight: 700; font-size: 17px; color: var(--bone); margin: 12px 0 8px; position: relative; z-index: 1; }
+.wf-soon__desc { font-size: 12.5px; color: var(--muted); line-height: 1.6; position: relative; z-index: 1; }
+.wf-soon__tag { margin-top: auto; padding-top: 16px; font-family: var(--mono); font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); position: relative; z-index: 1; }
